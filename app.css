@@ -1,0 +1,1140 @@
+:root {
+    /* layout background color */
+    --Background: #f1f1f1;
+    --White: #ffffff;
+
+    /* states color */
+    --Hover: #f7f7f7;
+    --Pressed: #f0f0f0;
+    --Focused: #005BD3;
+
+    /* strokes */
+    --S50: #ebebeb;
+    --S100: hsla(0, 0%, 0%, 0.07);
+    --S200: hsla(0, 0%, 100%, 0.2);
+
+    /* font color */
+    --Light: #e3e3e3;
+    --Mid: #616161;
+    --Dark: #475467;
+
+    /* grey shades */
+    --G50: #656266;
+    --G100: #616161;
+    --G200: #322f33;
+    --G300: #1c181d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter";
+}
+
+html {
+    background: var(--Background);
+}
+
+.navCtn {
+    height: 56px;
+    /* width: 100%; */
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--G300);
+    padding: 0px 16px;
+    color: var(--White);
+}
+
+.logo {
+    /* border: 1px solid blue; */
+    width: 464px;
+}
+
+.dropdownCtn {
+    position: absolute;
+    top: 64px;
+    /* left: 1104px; */
+    border: 1px solid var(--S50);
+    border-radius: 14px;
+    height: 384px;
+    width: 320px;
+    /* left: 1136px; */
+    right: 16px;
+    display: none;
+    color: var(--Dark);
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 18.2px;
+    background: var(--White);
+    padding: 6px 0px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    cursor: pointer;
+    z-index: 1;
+}
+
+.dropdownCtn a {
+    color: var(--Dark);
+    text-decoration: none;
+}
+
+.dropdownCtn:hover {
+    cursor: pointer;
+}
+
+.searchCtn {
+    /* border: 1px solid var(--S200); */
+    /* background: var(--White); */
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 8px;
+    height: 32px;
+    width: 480px;
+    background: var(--G200);
+    position: relative;
+    border: none;
+}
+
+.searchBar:hover {
+    border: 1px solid var(--S200);
+    background: var(--G200);
+    color: var(--White);
+}
+
+.searchBar:focus-visible {
+    /* border: 2px solid var(--White); */
+    outline: 2px solid var(--White);
+}
+
+.searchBar:active {
+    /* border: 2px solid var(--White); */
+    outline: 2px solid var(--White);
+}
+
+.searchIcon {
+    width: 13px;
+    height: 13px;
+    position: absolute;
+    /* fill: var(--G100); */
+    left: 10px;
+}
+
+.searchIcon path {
+    fill: var(--G100);
+}
+
+.searchBar {
+    /* border: 1px solid red; */
+    width: 480px;
+    padding: 16px;
+    outline: none;
+    background: var(--G200);
+    height: 18px;
+    font-size: 13px;
+    font-weight: 500;
+    padding-left: 8%;
+    border-radius: 8px;
+    border: 1px var(--S200);
+    color: var(--White);
+}
+
+.searchBar::placeholder {
+    color: var(--G100);
+}
+
+.storeDetails {
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 8px;
+    width: 464px;
+}
+
+.notificationCtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--G200);
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.notificationIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.notificationIcon path {
+    fill: var(--Light);
+}
+
+.storeCtn {
+    width: 142px;
+    height: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+}
+
+.storeLogo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    background: #36FBA1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.storeLogo p {
+    width: 18px;
+    height: 9px;
+    font-size: 12px;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+.subscriptionCtn {
+    width: 800px;
+    margin: auto;
+    /* border: 1px solid red; */
+    margin-top: 32px;
+}
+
+.trialCtn {
+    display: flex;
+    background: var(--G300);
+    /* margin-top: 32px; */
+    height: 56px;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0px 8px 0px 16px;
+}
+
+.trialText {
+    color: var(--Light);
+    font-size: 13px;
+}
+
+.selectPlan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 139px;
+    /* border: 1px solid white; */
+    gap: 8px;
+}
+
+.planText {
+    width: 99px;
+    /* height: 28px; */
+    padding: 6px 0px;
+    border: 1px solid #0000001A;
+    border-radius: 6px;
+    color: var(--Dark);
+    background: var(--White);
+    font-weight: 600;
+    font-size: 12px;
+    text-align: center;
+    box-shadow: 0px -1px 0px 0px #B5B5B5 inset;
+    cursor: pointer;
+}
+
+.planText:hover {
+    background: #f7f7f7;
+    border: 1px solid #0000001A;
+}
+
+.planText:active {
+    box-shadow: 0px 2px 1.5px 0px #E2E2E2 inset;
+    background: #f7f7f7;
+}
+
+.planText:focus-visible {
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #FFFFFF, 0px -1px 0px 0px #B5B5B5 inset;
+    border: 1px solid hsla(0, 0%, 0%, 0.102);
+}
+
+.closePlan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+}
+
+.setupCtn {
+    position: relative;
+    margin-top: 16px;
+    padding: 8px;
+    border: 1px solid var(--S50);
+    background: var(--White);
+    border-radius: 18px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input[type="range"] {
+    /* -webkit-appearance: none;
+    appearance: none; */
+    width: 72px;
+    height: 4px;
+    background: var(--Light);
+    border-radius: 28px;
+    outline: none;
+    -webkit-transition: 0.2s;
+    transition: 0.2s;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    display: none;
+    height: 0;
+    width: 0;
+}
+
+.circle {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.circleSvg {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background: none;
+    border-radius: 6px;
+}
+
+.circleSvg:focus {
+    outline-color: var(--Focused);
+}
+
+.circle:hover circle {
+    stroke-dasharray: none;
+}
+
+.loader {
+    display: none;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    animation: rotate 0.5s infinite linear;
+}
+
+#checkCount {
+    width: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+.checked {
+    content: url("https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg");
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.checked:hover {
+    content: url("https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg");
+}
+
+#progressBar {
+    width: 72px;
+    height: 4px;
+    background-color: #E3E3E3;
+}
+
+.progressCtn {
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 180px;
+    margin-top: 16px;
+}
+
+#progress {
+    height: 100%;
+    background: var(--G300);
+    transition: width 0.3s;
+}
+
+/* .circle circle {
+    stroke: #8a8a8a;
+} */
+
+/* circle.load {
+    content: url(https://crushingit.tech/hackathon-assets/icon-spinner.svg);
+    animation: rotate 1s linear infinite;
+    cursor: wait;
+} */
+
+/* @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+} */
+
+.setupText {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.intro {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--Dark);
+    margin-top: 4px;
+}
+
+.taskNumCtn {
+    font-size: 12px;
+    font-weight: 400;
+    color: #303030;
+    /* width: 168px; */
+    /* border: 1px solid blue; */
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    /* margin-top: 16px; */
+}
+
+.inputCtn {
+    width: 72px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.taskText {
+    font-weight: 600;
+    font-size: 14px;
+    color: #303030;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    width: 550px;
+    border: none;
+    background: none;
+    height: 40px;
+}
+
+.taskText:focus {
+    outline: 2px solid var(--Focused);
+}
+
+.mainText {
+    font-weight: 600;
+    font-size: 14px;
+    color: #303030;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    cursor: pointer;
+    width: 740px;
+    border: none;
+    background: none;
+    height: 40px;
+    border-radius: 6px;
+    /* border: 1px solid red; */
+}
+
+.mainText:focus {
+    outline: 2px solid var(--Focused);
+}
+
+.hideMainText {
+    display: none;
+}
+
+.description {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 18.2px;
+    width: 483.86px;
+    /* border: 1px solid red; */
+    color: var(--Mid);
+    /* margin-top: 16px; */
+}
+
+.description a {
+    text-decoration: none;
+}
+
+.theme {
+    width: 127px;
+    height: 28px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    border: 1.5px 1.5px 0px 1.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #404040;
+    color: var(--Light);
+    margin-top: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 1.5px #333333, 0px 1px 0px 1.5px #333333, 0px 2px 0px 0px #000000;
+}
+
+.theme:hover {
+    border: 1.5px 1.5px 0px 1.5px;
+    background: #2A2A2A;
+}
+
+.theme:active {
+    background: #2B2B2B;
+    box-shadow: 0px 0px 0px 1.5px #333333, 0px 3px 0px 0px #000000 inset;
+    outline: var(--Focused);
+}
+
+.theme:focus-visible {
+    border: 1px var(--Focused);
+    box-shadow: 0px 0px 0px 5px #005BD3, 0px 0px 0px 3px #FFFFFF, 0px 0px 0px 1.5px #333333;
+}
+
+.mainTask {
+    display: flex;
+    /* align-items: center; */
+    /* border: 1px solid green; */
+    gap: 8px;
+}
+
+.taskCtn {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid yellow; */
+    padding: 8px 8px 12px 8px;
+    border-radius: 10px;
+    /* display: none; */
+}
+
+.showTask {
+    display: flex;
+}
+
+.details {
+    /* border: 1px solid blue; */
+    display: flex;
+    justify-content: center;
+    display: none;
+}
+
+.activeDetails {
+    /* background: #F3F3F3; */
+    display: flex;
+}
+
+.activeCtn {
+    background: #f3f3f3;
+}
+
+.active {
+    content: url("https://crushingit.tech/hackathon-assets/icon-checkmark-circle.svg");
+}
+
+.add {
+    display: flex;
+    gap: 16px;
+}
+
+.import {
+    width: 112px;
+    height: 28px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--Dark);
+    /* border: 1px solid blue; */
+    border-radius: 6px;
+    margin-top: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+}
+
+.import:hover {
+    background: #E7E7E7;
+}
+
+.import:active {
+    background: #E0E0E0;
+}
+
+.import:focus-visible {
+    background: var(--White);
+    border: 2px solid var(--Focused);
+    outline: 2px solid var(--Focused);
+}
+
+.guideCtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 8px;
+    margin-bottom: 16px;
+}
+
+.dropdownSetupCtn {
+    /* margin-bottom: 30px; */
+    width: 28px;
+    width: 28px;
+    padding: 2px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    background: var(--White);
+}
+
+.dropdownSetup {
+    width: 20px;
+    height: 20px;
+}
+
+.dropdownSetupCtn:hover {
+    background: var(--Hover);
+}
+
+.dropdownSetupCtn:active {
+    background: var(--Pressed);
+}
+
+.dropdownSetupCtn:focus-visible {
+    border: 2px solid #005BD3;
+    outline: 2px solid #005BD3;
+}
+
+.container {
+    display: block;
+}
+
+.rotate {
+    rotate: 180deg;
+}
+
+.storeIcon {
+    width: 20px;
+    height: 20px;
+}
+
+.storeIcon path {
+    fill: var(--Dark);
+}
+
+.tick {
+    width: 16px;
+    height: 16px;
+    color: var(--Dark);
+}
+
+.storeName1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 12px 4px 8px;
+    background: #f1f1f1;
+    border-radius: 8px;
+    height: 36px;
+}
+
+.daviiCtn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.storeLogo1 {
+    width: 28px;
+    height: 28px;
+    border-radius: 5.25px;
+    background: #36FBA1;
+    font-size: 10.5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: hsla(0, 0%, 0%, 0.4);
+    font-weight: 500;
+}
+
+.sName {
+    font-weight: 600;
+    font-size: 13px;
+    color: var(--Dark);
+}
+
+.linkCtn {
+    display: flex;
+    flex-direction: column;
+}
+
+.linkCtn a {
+    font-weight: 400;
+    font-size: 13px;
+    height: 30px;
+    color: var(--Dark);
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    padding: 0px 6px;
+}
+
+.iconLink {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--Dark);
+    height: 32px;
+    /* border: 1px solid red; */
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 6px;
+    gap: 8px;
+}
+
+.iconLinkBtn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.dropdownCtn a:hover {
+    background: var(--Hover);
+}
+
+.dropdownCtn a:active {
+    background: var(--Pressed);
+}
+
+.dropdownCtn a:focus-visible {
+    border: 2px solid var(--Focused);
+    outline: 2px solid var(--Focused);
+}
+
+.dropdownCtn hr {
+    border: 0.75px solid var(--S100);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.ownerContact {
+    /* border: 1px solid red; */
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.storeOwner {
+    font-weight: 500;
+    font-size: 13px;
+    color: var(--Dark);
+    padding: 0px 6px;
+}
+
+.contact a {
+    font-weight: 400;
+    font-size: 13px;
+    height: 30px;
+    color: var(--Dark);
+    /* border: 1px solid blue; */
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    padding: 0px 6px;
+}
+
+.storeMail {
+    font-weight: 400;
+    font-size: 12px;
+    color: var(--G100);
+    padding: 0px 6px;
+}
+
+.focusedActive {
+    border: 2px solid var(--Focused);
+}
+
+.notificationDropdown {
+    position: absolute;
+    top: 64px;
+    background: var(--White);
+    border: 1px solid var(--S50);
+    border-radius: 14px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    right: 16px;
+    /* display: flex; */
+    flex-direction: column;
+    padding: 16px;
+    width: 383px;
+    z-index: 1;
+    display: none;
+}
+
+.showDropdown {
+    display: flex;
+}
+
+.alertCtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid red; */
+    font-weight: 600;
+    color: var(--Dark);
+    font-size: 14px;
+}
+
+.notiIcons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    height: 20px;
+}
+
+.alertText {
+    color: var(--Mid);
+    font-size: 13px;
+    font-weight: 600;
+    background: var(--Background);
+    padding: 16px;
+    width: 351px;
+    margin-top: 16px;
+}
+
+.notiIcons svg:focus-visible {
+    border: 1px solid var(--Focused);
+    border-radius: 4px;
+}
+
+.notificationBtn:hover {
+    background: var(--G100);
+}
+
+.notificationBtn:active {
+    background: var(--G50);
+}
+
+.notificationBtn:focus-visible {
+    background: var(--G50);
+    outline: 2px solid var(--Focused);
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000000;
+}
+
+.notificationBtn {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: var(--G200);
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    cursor: pointer;
+}
+
+.show {
+    display: flex;
+}
+
+.storeDropdownBtn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 142px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    background: var(--G200);
+    padding: 0px 2px 0px 8px;
+    border-radius: 8px;
+    border: none;
+    color: var(--Light);
+    height: 32px;
+}
+
+.storeLogo {
+    color: hsla(0, 0%, 0%, 0.4);
+}
+
+.showStoreDropdown {
+    display: block;
+}
+
+.dropdownCtn a:hover {
+    background: var(--Hover);
+}
+
+#exitPlan {
+    cursor: pointer;
+    background: var(--G300);
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+    border-radius: 6px;
+}
+
+#exitPlan:hover {
+    background: var(--G300);
+}
+#exitPlan:active {
+    background: var(--G300);
+}
+#exitPlan:focus-visible {
+    outline: 2px solid var(--Focused);
+    border: 2px solid var(--Focused);
+}
+
+.circleCtn {
+    display: flex;
+    gap: 8px;
+    height: 40px;
+    /* border: 1px solid red; */
+    justify-content: center;
+    align-items: center;
+}
+
+.circleCtn:focus {
+    outline: 2px solid #005BD3;
+}
+
+.mobileLogo {
+    display: none;
+}
+
+.mobilePlan {
+    display: none;
+}
+
+.tick1 {
+    border: none;
+    background: none;
+}
+
+.tick1:active {
+    border: 1px solid var(--Focused);
+}
+
+.tick1:focus-visible {
+    border: 1px solid var(--Focused);
+    outline: 1px solid var(--Focused);
+}
+
+.tick {
+    cursor: pointer;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: none;
+    background: none;
+}
+
+.tick:active {
+    border: 1px solid var(--Focused);
+}
+
+.tick:focus-visible {
+    border: 1px solid var(--Focused);
+    outline: 1px solid var(--Focused);
+}
+
+.dropdownCtn a:hover {
+    background: var(--Hover);
+}
+
+.dropdownCtn a:focus {
+    border: 1px solid var(--Focused);
+}
+
+.dropdownCtn a:active {
+    border: 1px solid var(--Focused);
+}
+
+.storeDropdownBtn:hover {
+    background: var(--G100);
+}
+
+.storeDropdownBtn:active {
+    background: var(--G50);
+}
+
+.storeDropdownBtn:focus-visible {
+    background: var(--G50);
+    outline: 2px solid var(--Focused);
+    box-shadow: 0px 0px 0px 3px #005BD3, 0px 0px 0px 1px #000000;
+}
+
+a {
+    text-decoration: none;
+}
+
+@media screen and (max-width: 1439px) {
+    .desktop {
+        display: none;
+    }
+
+    .searchBar {
+        width: 238px;
+        padding-left: 17%;
+    }
+
+    .searchCtn {
+        width: 238px;
+        /* padding-left: 6px; */
+    }
+
+    .desktopLogo {
+        display: none;
+    }
+
+    .mobileLogo {
+        display: block;
+    }
+
+    .storeDropdownBtn {
+        padding: 0;
+        width: 28px;
+        height: 28px;
+    }
+
+    .storeCtn {
+        width: 28px;
+    }
+
+    .storeDetails {
+        width: 72px;
+    }
+
+    .logo {
+        width: 32px;
+    }
+
+    .notificationCtn {
+        background: none;
+    }
+
+    .subscriptionCtn {
+        margin-top: 28px;
+        width: auto;
+    }
+
+    .searchIcon {
+        width: 13px;
+        height: 13px;
+        margin-right: 10px;
+    }
+
+    .desktopPlan {
+        display: none;
+    }
+
+    .mobilePlan {
+        display: block;
+    }
+
+    .plans {
+        display: flex;
+    }
+
+    .trialText {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .trialCtn {
+        height: 104px;
+        padding: 12px 8px 12px 16px;
+        border-radius: 0;
+    }
+
+    .selectPlan {
+        width: auto;
+    }
+
+    #exitPlan {
+        margin-bottom: 40px;
+    }
+
+    .taskText {
+        width: auto;
+    }
+
+    .taskImage {
+        display: none;
+    }
+
+    .description {
+        width: auto;
+    }
+
+    .setupCtn {
+        border-radius: 0;
+    }
+
+    .mainText {
+        width: auto;
+    }
+
+    .notificationDropdown {
+        width: 358px;
+    }
+
+    .alertText {
+        width: 326px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+}

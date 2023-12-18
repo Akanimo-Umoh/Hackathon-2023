@@ -63,7 +63,8 @@ html {
     width: 320px;
     /* left: 1136px; */
     right: 16px;
-    display: none;
+    visibility: hidden;
+    opacity: 0;
     color: var(--Dark);
     font-weight: 400;
     font-size: 13px;
@@ -73,6 +74,12 @@ html {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     cursor: pointer;
     z-index: 1;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+}
+
+.dropdownCtn.showCtn {
+    visibility: visible;
+    opacity: 1;
 }
 
 .dropdownCtn a {
@@ -451,7 +458,7 @@ input[type="range"]::-webkit-slider-thumb {
     height: 40px;
 }
 
-.taskText:focus {
+.taskText:focus-visible {
     outline: 2px solid var(--Focused);
 }
 
@@ -638,12 +645,22 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 .dropdownSetupCtn:focus-visible {
-    border: 2px solid #005BD3;
-    outline: 2px solid #005BD3;
+    outline-color: #005BD3;
 }
 
 .container {
-    display: block;
+    /* display: block; */
+    visibility: visible;
+    opacity: 1;
+    transition: max-height 0.5s ease-in-out, visibility 0.5s ease-in-out, opacity 1s ease-in-out;
+    max-height: 782px;
+}
+
+.container.showcontainer {
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
 }
 
 .rotate {
@@ -806,16 +823,18 @@ input[type="range"]::-webkit-slider-thumb {
     border-radius: 14px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     right: 16px;
-    /* display: flex; */
     flex-direction: column;
     padding: 16px;
     width: 383px;
     z-index: 1;
-    display: none;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    opacity: 0;
 }
 
 .showDropdown {
-    display: flex;
+    opacity: 1;
+    visibility: visible;
 }
 
 .alertCtn {
@@ -1019,7 +1038,7 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1023px) {
     .desktop {
         display: none;
     }
@@ -1136,5 +1155,20 @@ a {
         margin-left: auto;
         margin-right: auto;
         text-align: center;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .searchBar {
+        width: 200px;
+        padding-left: 17%;
+    }
+
+    .searchCtn {
+        width: 200px;
+    }
+
+    .notificationDropdown {
+        right: 9px;
     }
 }

@@ -16,32 +16,36 @@ document.addEventListener("click", function (event) {
 });
 
 // guide dropdown
-document.getElementById("dropdownTaskCtn").onclick = function(){
-    let mainTaskCtn = document.getElementById("mainTaskCtn");
-    if (mainTaskCtn.style.display === "none") {
-        mainTaskCtn.style.display = "block"
-        document.getElementById("dropdownTaskCtn").classList.remove("rotate");
-    } else {
-        mainTaskCtn.style.display = "none";
-        document.getElementById("dropdownTaskCtn").classList.add("rotate");
-    }
-}
+document.getElementById("dropdownTaskCtn").onclick = function () {
+  let mainTaskCtn = document.getElementById("mainTaskCtn");
+  mainTaskCtn.classList.toggle("showcontainer");
+  document.getElementById("dropdownTaskCtn").classList.toggle("rotate");
+};
+// document.getElementById("dropdownTaskCtn").onclick = function(){
+//     let mainTaskCtn = document.getElementById("mainTaskCtn");
+//     if (mainTaskCtn.style.display === "none") {
+//         mainTaskCtn.style.display = "block"
+//         document.getElementById("dropdownTaskCtn").classList.remove("rotate");
+//     } else {
+//         mainTaskCtn.style.display = "none";
+//         document.getElementById("dropdownTaskCtn").classList.add("rotate");
+//     }
+// }
 
 // store dropdown
 let button = document.getElementById("openStoreDropdown");
 let dropdownContent = document.getElementById("dropdownStore");
 
-button.addEventListener("click", function () {
-  dropdownContent.style.display =
-    dropdownContent.style.display === "block" ? "none" : "block";
-});
+button.addEventListener("click", function() {
+  dropdownContent.classList.toggle("showCtn");
+})
 
 document.addEventListener("click", function (event) {
   if (
     !button.contains(event.target) &&
     !dropdownContent.contains(event.target)
   ) {
-    dropdownContent.style.display = "none";
+    dropdownContent.classList.remove("showCtn");
   }
 });
 

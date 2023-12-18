@@ -18,11 +18,11 @@ You are to create a fully responsive experience for users on these device types:
 
 ## Figma Design Prototype
 
-https://www.figma.com/proto/W4IHXzpdgxrUMWuymS9R9i/Level-Up-Front-Hackathon?type=design&node-id=301-7069&t=Vp96v1PtUpHDWlOy-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=301%3A7069
+<a href="https://www.figma.com/proto/W4IHXzpdgxrUMWuymS9R9i/Level-Up-Front-Hackathon?type=design&node-id=301-7069&t=Vp96v1PtUpHDWlOy-1&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=301%3A7069">Design Prototype</a>
 
 ## Figma Design
 
-https://www.figma.com/file/W4IHXzpdgxrUMWuymS9R9i/Level-Up-Front-Hackathon?type=design&node-id=265-4290&mode=design&t=XKCHBN7y0HI4E1YB-0
+<a href="https://www.figma.com/file/W4IHXzpdgxrUMWuymS9R9i/Level-Up-Front-Hackathon?type=design&node-id=265-4290&mode=design&t=XKCHBN7y0HI4E1YB-0">Figma Design</a>
 
 ### Prerequisites
 

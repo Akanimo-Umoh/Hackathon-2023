@@ -1019,7 +1019,7 @@ a {
     text-decoration: none;
 }
 
-@media screen and (max-width: 1439px) {
+@media screen and (max-width: 1024px) {
     .desktop {
         display: none;
     }
